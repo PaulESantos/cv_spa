@@ -24,7 +24,7 @@ library(tidyverse)
 # folder in project
 using_googlesheets <- TRUE
 # Just the copied URL from the sheet
-positions_sheet_loc <-"https://docs.google.com/spreadsheets/d/1mA3mqm0aSoQ57OAmDKYwAKyjAtieLEiJTbbGN09aeNs/edit?usp=sharing" 
+positions_sheet_loc <-"https://docs.google.com/spreadsheets/d/1s4XV9RuLCNjL1f4qq4c8jfFed-ELOCEPXuN7bf8ZxJw/edit?usp=sharing" 
 # desire googlesheets data
 #"https://docs.google.com/spreadsheets/d/1eTpZBkKZH8gZJXyilYMwVmcna96mBdyhLxBB_DjQwAM/edit?usp=sharing"
 # Is this sheet available for anyone to read? If you're using a private sheet
@@ -94,7 +94,7 @@ if(PDF_EXPORT){
 }
 ```
 
-Contact {#contact}
+Contacto {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -104,7 +104,7 @@ contact_info %>%
 
 
 
-Skills {#skills}
+Programas {#skills}
 --------------------------------------------------------------------------------
 
 <i class="fab fa-r-project"></i>
@@ -128,11 +128,11 @@ Skills {#skills}
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Elaborado con el paquete [**pagedown**](https://github.com/rstudio/pagedown). 
 
-Source code available: [github.com/PaulESantos/cv](https://github.com/PaulESantos/cv/).
+Código disponible en: [github.com/PaulESantos/cv](https://github.com/PaulESantos/cv/).
 
-Updated: `r Sys.Date()`.
+Actualizado: `r Sys.Date()`.
 
 
 
@@ -142,7 +142,7 @@ Main
 Paul Efren Santos Andrade {#title}
 --------------------------------------------------------------------------------
 
-Education {data-icon=graduation-cap data-concise=true}
+Educación {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -150,7 +150,7 @@ print_section(position_data, 'education')
 ```
 
 
-Research & Data Science Experience {data-icon=laptop}
+Experiencia {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -169,7 +169,7 @@ print_section(position_data, 'research_data')
 <br>
 
 
-Teaching and Project Management {data-icon=chalkboard-teacher}
+Talleres {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -187,14 +187,14 @@ print_section(position_data, 'teaching_positions')
 <br>
 <br>
 
-Talks {data-icon=microphone-alt}
+Presentaciones {data-icon=microphone-alt}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'talks')
 ```
 
-Publications {data-icon=book}
+Publicaciones {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -202,7 +202,7 @@ print_section(position_data, 'academic_articles')
 ```
 
 
-Poster Presentations {data-icon=book}
+Posters {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
