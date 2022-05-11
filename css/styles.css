@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700&display=swap');
+
+/* Main text is monserrat*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #444;
+}
+
+strong {
+  font-weight: 600;
+}
+
+img {
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1pt #fa430a57 solid;
+}
+
+[data-id="main"] {
+    padding-left: 1rem;
+    padding-right: 2.4rem;
+}
+
+/* Give headers playfair font */
+
+.header-block{
+  background-color: white;
+  border-bottom: 1pt #dedede solid;
+  width: var(--pagedjs-width);
+  height: 242px;
+  margin-top: calc(-1*var(--pagedjs-margin-top));
+  margin-left: -19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-block-inner {
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 229px;
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  border-top: 1px solid #add8e65e;
+}
+
+div.title {
+    font-family: "Playfair Display", serif;
+    text-align: left;
+    padding: 3rem;
+    font-size: 5.2rem!important;
+    line-height: 1;
+    display: block!important;
+    color: #e43b07;
+    max-width: 52%;
+}
+
+.subtitle {
+    display: flex;
+    margin: 0 auto;
+    position: absolute;
+    max-width: 46.3%;
+    top: 45px;
+    right: 35px;
+    /* font-style: oblique; */
+    /* font-family: 'Playfair Display'; */
+    color: #666;
+    letter-spacing: 1pt;
+    font-size: 0.8em;
+}
+
+.item {
+  text-transform: uppercase;
+  display: block;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #000;
+}
+
+h1{
+  text-transform: none;
+  color: silver;
+  font-weight: normal;
+  display: none;
+}
+
+h2 {
+  letter-spacing: 1pt;
+}
+.aside h2,
+#aside h2 {
+ color: #35859f; 
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-weight: 500;
+}
+
+/* When in PDF export mode make sure superscripts are nice and small and italic */
+sup {
+  font-size: 0.45rem;
+  font-style: italic;
+}
+
+/* Avoid the breaking within a section */
+.blocks {
+  break-inside: avoid;
+}
+
+* {
+  /* Override default right margin for sidebar*/
+  --pagedjs-margin-right: 0.2in;
+  --pagedjs-margin-left: 0.2in;
+}
+
+/* Customize some of the sizing variables */
+:root {
+  --sidebar-width: 11rem; /* Shrink sidebar width  */
+  --sidebar-background-color: white; /* Sidebar color*/
+  --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
+  --decorator-outer-dim: 10px; /* Make position delineating circles larger */
+  --decorator-border: 2px solid #dfeef4; /* Timeline line color*/
+}
+
+/* sidebar left border */
+
+.pagedjs_sheet::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 14.5rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #dedede;
+    height: 100%;
+}
+
+.pagedjs_sheet::after,
+.pagedjs_first_page .pagedjs_sheet::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 14rem;
+    background-color: #fcfcfc;
+}
+
+.pagedjs_first_page .pagedjs_sheet::after {
+  height: 75.9%;
+  top: 248.1px;
+}
+
+.pagedjs_sheet::after {
+  height: 98.7%;
+  top: 7px;
+}
+
+
+a {
+  color: #e43b07;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section.level1.aside {
+  height: 74.9%;
+  padding-top: 1.6rem;
+}
+
+
+[data-id="skills"] {
+    line-height: 1.2;
+}
+
+[data-id="disclaimer"] {
+  position: static;
+  text-align: left;
+  opacity: 90%;
+}
+
+.aside {
+    width: var(--sidebar-width);
+    padding: 0.9in 5px 0.9px 10px;
+    font-size: 0.8rem;
+    float: left;
+    position: absolute;
+    left: 0;
+}
+
+[data-id="main"] {
+    width: var(--main-width);
+    padding: 0 0.25in 0 0.25in;
+    font-size: 0.7rem;
+    float: right;
+}
+
+#aside,
+.aside {
+  z-index: 3;
+  color: #253b5e;
+}
+
+#aside a{
+  color: #243b5f;
+}
+
+#aside p, 
+#aside ul li{
+  color: #243b5f;
+}
+
+.details .place {
+  margin-top: 0.25rem;
+}
+
+.main-block:not(.concise) .details div {
+  padding-top: 0.005rem;
+}
+
+/* Laptop icon isn't centered by default which is lame */
+.fa-laptop {
+  margin-left: -3px;
+}
+
+/* When we have links at bottom in a list make sure they actually are numbered */
+#links li {
+  list-style-type: decimal;
+}
+
+/* Dont put the little fake list point in front of links */
+.aside li::before {
+  display: none;
+}
+
+/* Move closer to start and up towards header */
+.aside ul {
+  padding-left: 0rem;
+}
+
+.aside li::before {
+  position: relative;
+  margin-left: -4.25pt;
+  content: "• ";
+}
+
+/* Make sure elements in aside are centered and have a nice small text */
+.aside {
+  width: calc(var(--sidebar-width) + 9px);
+  line-height: 1.2;
+  font-size: 0.75rem;
+}
+
+/* Make little circle outline */
+/* teal #1cc1b3 */
+.decorator::after {
+  background-color: #71a8bb;
+  
+}
+
+/* Remove the fake bullets from lists */
+.aside li::before {
+  content: auto;
+}
+
+.skill-bar {
+  color: white;
+  padding: 0.1rem 0.25rem;
+  margin-top: 3px;
+  position: relative;
+  width: 100%;
+}
+
+
+/* When the class no-timeline is added we remove the after psuedo element from the header... */
+
+/* Removes the psuedo element on h2 tags for this section */
+.section.no-timeline h2::after {
+  content: none;
+}
+
+/* Without adding padding the content is all up on the title */
+.section.no-timeline h2 {
+  padding-bottom: 1rem;
+}
+
+/* Add styles for little cards  */
+.info-card{
+  width: 220px;    
+  float: left;    
+  padding: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 1px 1px 4px black;
+}
