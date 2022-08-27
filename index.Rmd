@@ -36,7 +36,7 @@ sheet_is_publicly_readable <- TRUE
 # document
 PDF_EXPORT <- FALSE
 #https://github.com/PaulESantos/cv/blob/main/cv.pdf
-CV_PDF_LOC <-  "github.com/PaulESantos/cv/blob/main/cv_spa.pdf"
+CV_PDF_LOC <-  "https://github.com/PaulESantos/cv_spa/raw/main/cv_spa.pdf"
   #"github.com/PaulESantos/cv/raw/master/cv.pdf"
 CV_HTML_LOC <- "paulesantos.github.io/cv_spa/"
 # A global (gasp) variable that holds all the links that were inserted for
