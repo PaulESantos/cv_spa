@@ -27,6 +27,41 @@ img {
     padding-right: 2.4rem;
 }
 
+/* Give headers playfair font title */
+.header-block-title{
+  background-color: white;
+  border-bottom: 1pt #dedede solid;
+  width: var(--pagedjs-width);
+  height: 242px;
+  margin-top: calc(-1*var(--pagedjs-margin-top));
+  margin-left: -19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-block-inner-title {
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 229px;
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  border-top: 1px solid #add8e65e;
+}
+
+
+div.titulop {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 2.7rem;
+    font-size: 1.5rem!important;
+    line-height: 1;
+    display: block!important;
+    color: #454542; /*#e43b07;*/
+    max-width: 100%;
+}
+
 /* Give headers playfair font */
 
 .header-block{

@@ -68,10 +68,11 @@ if(PDF_EXPORT){
 <div class="header-block">
   <div class="header-block-inner">
   <div class="title">Paul Efren<br>
-  <p style="font-size : 0.8rem; font-family: Playfair Display, serif; color: #454542"> CBP: 15490</p></div>
+  <p style="font-size : 1rem; font-family: Playfair Display, serif; color: #454542"> CV - 2023 </p></div>
 
   </div>
 </div>
+
 <div class = "subtitle">
 ```{r intro}
   print_text_block(text_blocks, 'intro')
