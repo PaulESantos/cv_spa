@@ -130,7 +130,7 @@ Disclaimer {#disclaimer}
 
 Elaborado con el paquete [**pagedown**](https://github.com/rstudio/pagedown). 
 
-Código disponible en: [github.com/PaulESantos/cv](https://github.com/PaulESantos/cv/).
+Código disponible en: [github.com/PaulESantos/cv](https://github.com/PaulESantos/cv_spa/).
 
 Actualizado: `r Sys.Date()`.
 
