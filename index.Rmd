@@ -118,10 +118,8 @@ Programas {#skills}
 <i class="fas fa-code-branch"></i> Git
 
 <i class="fa-brands fa-github"></i> GitHub
+
 <!--i class="fab fa-adobe"></i--> AutoCAD
-
-
-
 
 
 Disclaimer {#disclaimer}
