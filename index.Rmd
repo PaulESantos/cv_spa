@@ -203,6 +203,13 @@ Publicaciones {data-icon=book}
 print_section(position_data, 'academic_articles')
 ```
 
+Paquetes de R {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'r_packages')
+```
+
 
 Posters {data-icon=book}
 --------------------------------------------------------------------------------
