@@ -67,7 +67,7 @@ if(PDF_EXPORT){
 
 <div class="header-block">
   <div class="header-block-inner">
-  <div class="title">Paul Efren Santos Andrade<br>
+  <div class="title">Paul Efren Santos Andrade <br>
   <p style="font-size : 0.7rem; font-family: Playfair Display, serif; color: #454542">  </p></div>
 
   </div>
