@@ -1,0 +1,178 @@
+---
+title: "Paul Efren's CV"
+author: Paul Efren Santos Andrade
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv_1.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "https://docs.google.com/spreadsheets/d/1s4XV9RuLCNjL1f4qq4c8jfFed-ELOCEPXuN7bf8ZxJw/edit?usp=sharing",
+    #"https://docs.google.com/spreadsheets/d/14MQICF2F8-vf8CKPF1m4lyGKO6_thG-4aSwat1e2TWc",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+![logo](logo.JPG){width=90%}
+
+```{r}
+cat("[Ver este CV en línea](https://paulesantos.github.io/cv_spa/)  \n")
+cat("[<i class='fas fa-download'></i> Descargar un PDF de este CV](https://github.com/PaulESantos/cv_spa/raw/main/cv_spa.pdf)")
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV |> print_contact_info()
+```
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+<i class="fab fa-r-project"></i>
+
+<i class="fab fa-python"></i> Python
+
+<i class="fas fa-globe-americas"></i> ArcGIS
+
+<i class="fas fa-code-branch"></i> Git
+
+<i class="fas fa-database"></i> SQL
+
+<i class="fas fa-database"></i> Power BI
+
+<i class="fab fa-adobe"></i> AutoCAD
+
+ Photoshop
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Elaborado con el paquete [**datadrivencv**](https://nickstrayer.me/datadrivencv). 
+
+Código disponible en: [github.com/PaulESantos/cv_spa](https://github.com/PaulESantos/cv_spa/).
+
+Actualizado: `r Sys.Date()`.
+
+Main
+================================================================================
+
+Paul Efren Santos Andrade  {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+# Note the assignment back to CV. This is so the link stripping works properly in PDF mode
+CV <- print_text_block(CV, "intro") 
+```
+
+
+
+Educación {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'education')
+```
+
+Experiencia {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'research_data')
+```
+
+Experiencia en Investigación {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'research_positions')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+
+Publicaciones {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'academic_articles')
+```
+
+Talleres {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV <- print_text_block(CV, 'teaching_experience_aside')
+```
+:::
+
+```{r}
+CV <- print_section(CV, 'teaching_positions')
+```
+
+Presentaciones {data-icon=microphone-alt}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'talks')
+```
+
+Desarrollo de herramientas en R {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'r_packages')
+```
+
+
+Posters {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'posters')
+```
+
+
+
+
+```{r}
+print_links(CV)
+```
