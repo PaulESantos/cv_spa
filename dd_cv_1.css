@@ -158,7 +158,7 @@ div.decorator::before {
 }
 
 img {
-  border-radius: 50%;
+  border-radius: 30%;
   margin: 0 auto;
   display: block;
   padding: 0.5rem;

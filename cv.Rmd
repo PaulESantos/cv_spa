@@ -44,7 +44,6 @@ if(params$pdf_mode) {
 
 Aside
 ================================================================================
-
 ![logo](logo.JPG){width=90%}
 
 ```{r}
@@ -52,7 +51,7 @@ cat("[Ver este CV en línea](https://paulesantos.github.io/cv_spa/)  \n")
 cat("[<i class='fas fa-download'></i> Descargar un PDF de este CV](https://github.com/PaulESantos/cv_spa/raw/main/cv_spa.pdf)")
 ```
 
-Contact {#contact}
+Contacto {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -61,7 +60,7 @@ CV |> print_contact_info()
 
 
 
-Language Skills {#skills}
+Lenguajes de Programación {#skills}
 --------------------------------------------------------------------------------
 <i class="fab fa-r-project"></i>
 
